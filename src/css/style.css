@@ -1,2 +1,192 @@
+#email-search {
+  background-color: #004A80;
+  color: #fff;
+  height: 420px; }
+  #email-search .heading {
+    justify-content: center;
+    margin-bottom: 1rem; }
+    #email-search .heading h1 {
+      font-weight: bold;
+      font-size: 52px;
+      margin-top: 2rem; }
+  #email-search .sub-heading {
+    justify-content: space-around;
+    margin-bottom: 1rem; }
+    #email-search .sub-heading span {
+      font-size: 24px;
+      color: #F6BC25;
+      font-weight: 700; }
+    #email-search .sub-heading h5 {
+      font-size: 24px;
+      line-height: 29px; }
+  #email-search .icon-text {
+    padding-left: 15px; }
+    #email-search .icon-text .text {
+      margin: 3px 5px 6px 14px; }
+      #email-search .icon-text .text p {
+        font-size: 16px;
+        color: #F6BC25;
+        font-weight: 700; }
+  #email-search .form {
+    justify-content: space-around;
+    margin-bottom: 1rem; }
+    #email-search .form input[type=email] {
+      display: inline-block;
+      font-size: 16px;
+      color: #9B9B9B;
+      letter-spacing: 2px;
+      padding: 12px 13px;
+      line-height: 18px;
+      text-transform: uppercase; }
+    #email-search .form .btn-submit {
+      background-color: #F6BC25;
+      font-size: 16px;
+      font-weight: bold;
+      color: #004A80;
+      letter-spacing: 1px;
+      padding: 10px 30px;
+      border-radius: 6px;
+      width: 9rem;
+      cursor: pointer; }
+      #email-search .form .btn-submit:hover {
+        background-color: #F2DA56; }
+
+#list-section {
+  background-image: linear-gradient(0deg, #E6E6E6 0%, #FFFFFF 100%); }
+  #list-section .heading {
+    justify-content: center;
+    margin-top: 2rem; }
+    #list-section .heading h2 {
+      color: #004A80;
+      font-weight: bold;
+      font-size: 52px;
+      line-height: 70px;
+      margin-bottom: 1.3rem; }
+  #list-section .para p {
+    font-size: 22px;
+    color: #4A4A4A;
+    letter-spacing: 0;
+    line-height: 30px; }
+  #list-section .list {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 2rem; }
+    #list-section .list ol {
+      counter-reset: my-awesome-counter;
+      list-style: none;
+      padding-left: 40px; }
+    #list-section .list ol li {
+      margin: 0 0 2rem 0;
+      counter-increment: item;
+      position: relative;
+      font-size: 18px;
+      line-height: 26px;
+      width: 60%; }
+    #list-section .list li h6 {
+      color: #004A80;
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 0;
+      margin-bottom: 10px; }
+    #list-section .list ol li::before {
+      content: counter(item, decimal);
+      color: #fcd000;
+      font-size: 48px;
+      font-weight: bold;
+      position: absolute;
+      padding: 15px 45px 46px 19px;
+      --size: 35px;
+      left: calc(-1 * var(--size) - 38px);
+      line-height: var(--size);
+      width: var(--size);
+      height: var(--size);
+      top: 5px;
+      background: #004A80;
+      border-radius: 50%;
+      text-align: center; }
+    #list-section .list #a {
+      counter-reset: item 0; }
+    #list-section .list #b {
+      counter-reset: item 3; }
+
+footer {
+  padding: 1rem 1rem;
+  background-color: #ffffff; }
+  footer .footer-content {
+    font-size: 15px;
+    color: #999999;
+    letter-spacing: 0;
+    line-height: 20px; }
+  footer .footer-link {
+    text-decoration: none;
+    font-size: 14px;
+    color: #004A80;
+    font-weight: 700;
+    letter-spacing: 0; }
+
 body {
-  font-family: 'Arimo', sans-serif; }
+  font-family: 'Arimo', sans-serif;
+  box-sizing: border-box; }
+
+@media only screen and (max-width: 805px) {
+  #email-search {
+    height: 448px; }
+    #email-search .heading {
+      text-align: center; }
+      #email-search .heading h1 {
+        font-size: 48px; }
+    #email-search .sub-heading {
+      text-align: center; }
+      #email-search .sub-heading h5 {
+        font-size: 20px; }
+    #email-search .form .btn-submit {
+      width: 8rem; }
+    #email-search .icon-text .text p {
+      font-size: 16px; }
+  #list-section .heading h2 {
+    font-size: 48px; }
+  #list-section .para p {
+    font-size: 20px;
+    line-height: 28px; }
+  #list-section .list ol li {
+    width: auto; } }
+
+@media only screen and (max-width: 480px) {
+  #email-search {
+    height: 503px; }
+    #email-search .heading {
+      text-align: center; }
+      #email-search .heading h1 {
+        font-size: 38px; }
+    #email-search .sub-heading {
+      text-align: center; }
+      #email-search .sub-heading h5 {
+        font-size: 18px; }
+    #email-search .form input[type=email] {
+      width: 100%;
+      margin-bottom: 4px; }
+    #email-search .form .btn-submit {
+      width: 100%; }
+  #list-section .heading {
+    margin: 20px auto; }
+    #list-section .heading h2 {
+      font-size: 38px;
+      line-height: 40px;
+      text-align: center;
+      margin-bottom: 0.3rem; }
+  #list-section .para {
+    margin: 0 auto; }
+    #list-section .para p {
+      font-size: 18px;
+      line-height: 28px; }
+  #list-section .list {
+    flex-direction: column;
+    margin: 0 20px; }
+    #list-section .list ol li {
+      width: auto;
+      font-size: 16px;
+      line-height: 24px; }
+      #list-section .list ol li h6 {
+        font-size: 20px; }
+  footer .link {
+    text-align: center; } }
