@@ -10,7 +10,9 @@
          var request = new XMLHttpRequest();
          
         // Instantiating the request object
-        request.open("GET", "https://cors-anywhere.herokuapp.com/https://ltv-data-api.herokuapp.com/api/v1/records.json?email=doesmith@example.com");
+        var searchStr = document.getElementById('email').value;
+        var url = "https://cors-anywhere.herokuapp.com/https://ltv-data-api.herokuapp.com/api/v1/records.json?email=" + searchStr;
+        request.open("GET", url);
 
         request.onload = function () {
             // Begin accessing JSON data here
@@ -31,7 +33,7 @@
                 sessionStorage.setItem("relative", rel);
 
 
-                var searchStr = document.getElementById('email').value;
+                
                 if(searchStr == emailStr){
                 //  var url = "result.html?des=" + description;
                 $(".transparentCover").hide(); 
@@ -40,8 +42,8 @@
                
                 }
                 else{
-                  $(".loading").hide(); 
-                    alert('error');
+                    alert('No data found for this email address.Try again');
+                    $(".loading").hide(); 
                 }
             
               } else {

@@ -15,6 +15,7 @@
     .sub-heading{
         justify-content: space-around;
         margin-bottom: 1rem;
+        margin: 0 auto;
         span{
             font-size: 24px;
             color: #F6BC25;
@@ -30,11 +31,9 @@
         padding-left: 15px;
         .text{
             margin: 3px 5px 6px 14px;
-            p{
-                font-size: 16px;
-                color: #F6BC25;
-                font-weight: 700;
-            }
+            font-size: 16px;
+            color: #F6BC25;
+            font-weight: 700;
         }
     }
    
@@ -60,11 +59,10 @@
                outline:none;
                border: 2px solid #F6BC25;
                box-shadow: inset 0 -1px 4px 0 rgba(0,0,0,0.20);
-          }
+          }  
           .error{
               display: none;
             text-transform: none;
-           
             color: red;
             letter-spacing: 0;
             }

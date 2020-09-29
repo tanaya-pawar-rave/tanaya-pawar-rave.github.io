@@ -55,10 +55,9 @@
             <div class="row icon-text ">
                 <div class="img-div">
                     <img src="assets/SVGs/lock.svg">
+                    <span class="text">Enter Any Email Address. They won't be notified</span>
                 </div>
-                <div class="text">
-                    <p>Enter Any Email Address. They won't be notified</p>
-                </div>
+              
             </div>
         </div>
     </section>
@@ -150,12 +149,21 @@
           var regExp = /^([\w\.\+]{1,})([^\W])(@)([\w]{1,})(\.[\w]{1,})+$/;
   
           $('[type="email"]').on('keyup', function() {     
-          $('#label').hide();
+          if(regExp.test( $(this).val() ) ){
+            $('#label').show();
+            $('#error').hide(); 
+            $('.floating-input:focus').css("border", "2px solid #F6BC25");       
+          }
+          if(!(regExp.test( $(this).val()) ) ){
+            $('#label').hide();
+            $('#error').show();
+            $('.floating-input:focus').css("border", "2px solid red");
 
-          regExp.test( $(this).val() ) ? $('#label').show() : $('#error').show();
+          }
           if(document.getElementById("email").value == '') {
               $('#error').hide(); 
               $('#label').show(); 
+              $('.floating-input:focus').css("border", "2px solid #F6BC25");
            }
           });
   

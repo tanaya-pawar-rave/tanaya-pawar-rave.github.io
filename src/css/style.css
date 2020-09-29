@@ -11,7 +11,8 @@
       margin-top: 2rem; }
   #email-search .sub-heading {
     justify-content: space-around;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    margin: 0 auto; }
     #email-search .sub-heading span {
       font-size: 24px;
       color: #F6BC25;
@@ -22,11 +23,10 @@
   #email-search .icon-text {
     padding-left: 15px; }
     #email-search .icon-text .text {
-      margin: 3px 5px 6px 14px; }
-      #email-search .icon-text .text p {
-        font-size: 16px;
-        color: #F6BC25;
-        font-weight: 700; }
+      margin: 3px 5px 6px 14px;
+      font-size: 16px;
+      color: #F6BC25;
+      font-weight: 700; }
   #email-search .form {
     justify-content: space-around;
     margin-bottom: 1rem; }
@@ -273,13 +273,16 @@ body {
 
 @media only screen and (max-width: 805px) {
   #email-search .heading {
-    text-align: center; }
+    text-align: center;
+    margin: 0 auto; }
     #email-search .heading h1 {
       font-size: 48px; }
   #email-search .sub-heading {
     text-align: center; }
     #email-search .sub-heading h5 {
       font-size: 20px; }
+  #email-search .form .btn-div .btn-submit {
+    padding: 0.6rem 2rem; }
   #email-search .icon-text .text p {
     font-size: 16px; }
   #list-section .heading h2 {
@@ -300,13 +303,27 @@ body {
         #result-section .result-row .result-box .result-content .result {
           margin: 0 1rem; } }
 
-@media only screen and (max-width: 604px) {
+@media only screen and (max-width: 640px) {
+  #email-search .form .btn-div .btn-submit {
+    width: 100%;
+    padding: 0.6rem 0.7rem; }
+  #list-section .heading {
+    text-align: center; }
+  #list-section .para {
+    margin: 0 auto; }
+  #list-section .list {
+    flex-direction: column;
+    padding: 0 3rem; }
+  #list-section .form .btn-submit {
+    width: 100%; }
   #result-section .sub-heading {
     margin: 0 auto; }
   #result-section .result-row .result-box {
     height: 480px; }
     #result-section .result-row .result-box .result-content .result {
       margin: 0 1rem; }
+      #result-section .result-row .result-box .result-content .result .img-result {
+        display: none; }
   footer .link {
     text-align: center; } }
 
@@ -342,7 +359,8 @@ body {
       line-height: 28px; }
   #list-section .list {
     flex-direction: column;
-    margin: 0 20px; }
+    margin: 0 20px;
+    padding: 0 1rem; }
     #list-section .list ol li {
       width: auto;
       font-size: 16px;
