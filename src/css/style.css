@@ -30,6 +30,40 @@
   #email-search .form {
     justify-content: space-around;
     margin-bottom: 1rem; }
+    #email-search .form .form-group {
+      position: relative; }
+      #email-search .form .form-group .floating-label {
+        position: relative;
+        margin-bottom: 20px; }
+      #email-search .form .form-group .floating-input, #email-search .form .form-group .floating-select {
+        font-size: 14px;
+        display: block;
+        width: 100%;
+        padding: 1.8rem 1rem 0.8rem;
+        height: 23px;
+        border-radius: 3px; }
+      #email-search .form .form-group .floating-input:focus, #email-search .form .form-group .floating-select:focus {
+        outline: none;
+        border-bottom: 2px solid #5264AE; }
+      #email-search .form .form-group label {
+        font-size: 16px;
+        color: #9B9B9B;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        position: absolute;
+        pointer-events: none;
+        line-height: 18px;
+        left: 16px;
+        top: 13px;
+        transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all;
+        -webkit-transition: 0.2s ease all; }
+      #email-search .form .form-group .floating-input:focus ~ label, #email-search .form .form-group .floating-input:not(:placeholder-shown) ~ label {
+        top: 2px;
+        font-size: 14px; }
+      #email-search .form .form-group .floating-select:focus ~ label, #email-search .form .form-group .floating-select:not([value=""]):valid ~ label {
+        top: 2px;
+        font-size: 14px; }
     #email-search .form input[type=email] {
       display: inline-block;
       font-size: 16px;
@@ -81,7 +115,7 @@
       position: relative;
       font-size: 18px;
       line-height: 26px;
-      width: 60%; }
+      padding: 1rem 2rem; }
     #list-section .list li h6 {
       color: #004A80;
       font-size: 22px;
