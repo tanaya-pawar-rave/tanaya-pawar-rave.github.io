@@ -13,5 +13,12 @@ footer{
         color: #004A80;
         font-weight: 700;
         letter-spacing: 0;
+        margin-left: 3px;
+        border-right: 1px solid  #004A80;
+       
+    }
+    .footer-link-last{
+        border-right: none;
+       
     }
 }

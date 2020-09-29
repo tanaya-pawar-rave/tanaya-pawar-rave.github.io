@@ -1,7 +1,7 @@
 #email-search {
   background-color: #004A80;
   color: #fff;
-  height: 420px; }
+  padding: 0 0 1rem; }
   #email-search .heading {
     justify-content: center;
     margin-bottom: 1rem; }
@@ -44,43 +44,47 @@
         border-radius: 3px; }
       #email-search .form .form-group .floating-input:focus, #email-search .form .form-group .floating-select:focus {
         outline: none;
-        border-bottom: 2px solid #5264AE; }
+        border: 2px solid #F6BC25;
+        box-shadow: inset 0 -1px 4px 0 rgba(0, 0, 0, 0.2); }
+      #email-search .form .form-group .error {
+        display: none;
+        text-transform: none;
+        color: red;
+        letter-spacing: 0; }
       #email-search .form .form-group label {
-        font-size: 16px;
+        font-size: 15px;
         color: #9B9B9B;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         text-transform: uppercase;
         position: absolute;
         pointer-events: none;
         line-height: 18px;
-        left: 16px;
+        left: 18px;
         top: 13px;
         transition: 0.2s ease all;
         -moz-transition: 0.2s ease all;
         -webkit-transition: 0.2s ease all; }
       #email-search .form .form-group .floating-input:focus ~ label, #email-search .form .form-group .floating-input:not(:placeholder-shown) ~ label {
-        top: 2px;
-        font-size: 14px; }
+        top: 6px;
+        font-size: 12px; }
       #email-search .form .form-group .floating-select:focus ~ label, #email-search .form .form-group .floating-select:not([value=""]):valid ~ label {
         top: 2px;
         font-size: 14px; }
     #email-search .form input[type=email] {
-      display: inline-block;
       font-size: 16px;
-      color: #9B9B9B;
+      color: #000000;
       letter-spacing: 2px;
       padding: 12px 13px;
-      line-height: 18px;
-      text-transform: uppercase; }
+      line-height: 18px; }
     #email-search .form .btn-submit {
-      background-color: #F6BC25;
+      background-image: linear-gradient(225deg, #F2DA56 0%, #F6BC25 100%);
+      box-shadow: 0 0px 0 0 #A6953B, inset 0 0px 0 0 #FFFFFF;
       font-size: 16px;
       font-weight: bold;
       color: #004A80;
       letter-spacing: 1px;
-      padding: 10px 30px;
+      padding: 0.6rem 3rem;
       border-radius: 6px;
-      width: 9rem;
       cursor: pointer; }
       #email-search .form .btn-submit:hover {
         background-color: #F2DA56; }
@@ -143,6 +147,68 @@
     #list-section .list #b {
       counter-reset: item 3; }
 
+#result-section .navbar {
+  background-color: #004A80; }
+
+#result-section .heading {
+  justify-content: center;
+  margin-top: 1.5rem; }
+  #result-section .heading h1 {
+    font-size: 52px;
+    color: #004A80;
+    font-weight: bold; }
+
+#result-section .sub-heading {
+  justify-content: center;
+  margin-bottom: 1rem; }
+  #result-section .sub-heading h5 {
+    font-size: 24px;
+    color: #4A4A4A;
+    line-height: 32px; }
+
+#result-section .result-row {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem; }
+  #result-section .result-row .result-box {
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0;
+    border-radius: 30px;
+    padding: 2rem 2rem;
+    width: 840px;
+    height: 365px; }
+    #result-section .result-row .result-box .result-content {
+      display: flex;
+      padding: 0px 2rem; }
+      #result-section .result-row .result-box .result-content .result {
+        margin: 0px 1rem; }
+        #result-section .result-row .result-box .result-content .result h2 {
+          color: #004A80;
+          font-size: 32px;
+          font-weight: bold; }
+        #result-section .result-row .result-box .result-content .result h6 {
+          font-size: 20px;
+          color: #004A80;
+          font-weight: 700; }
+        #result-section .result-row .result-box .result-content .result p {
+          font-size: 16px;
+          color: #000000;
+          letter-spacing: 0;
+          line-height: 24px; }
+        #result-section .result-row .result-box .result-content .result p#number {
+          font-size: 16px;
+          color: #004A80;
+          letter-spacing: 0;
+          line-height: 24px; }
+        #result-section .result-row .result-box .result-content .result .img-result {
+          background-color: #004A80;
+          border-radius: 50%;
+          padding: 7px;
+          width: 60px;
+          height: 60px; }
+
 footer {
   padding: 1rem 1rem;
   background-color: #ffffff; }
@@ -156,51 +222,112 @@ footer {
     font-size: 14px;
     color: #004A80;
     font-weight: 700;
-    letter-spacing: 0; }
+    letter-spacing: 0;
+    margin-left: 3px;
+    border-right: 1px solid  #004A80; }
+  footer .footer-link-last {
+    border-right: none; }
 
 body {
   font-family: 'Arimo', sans-serif;
   box-sizing: border-box; }
 
+.form-group {
+  margin-bottom: 0; }
+
+.transparentCover {
+  display: none;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  -moz-opacity: 0.4;
+  -khtml-opacity: 0.4;
+  z-index: 100; }
+
+.loading {
+  display: none;
+  position: absolute;
+  border: 16px solid #f3f3f3;
+  /* Light grey */
+  border-top: 16px solid #3498db;
+  /* Blue */
+  border-radius: 50%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  background-color: white;
+  text-align: center;
+  z-index: 101;
+  animation: spin 2s linear infinite; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
 @media only screen and (max-width: 805px) {
-  #email-search {
-    height: 448px; }
-    #email-search .heading {
-      text-align: center; }
-      #email-search .heading h1 {
-        font-size: 48px; }
-    #email-search .sub-heading {
-      text-align: center; }
-      #email-search .sub-heading h5 {
-        font-size: 20px; }
-    #email-search .form .btn-submit {
-      width: 8rem; }
-    #email-search .icon-text .text p {
-      font-size: 16px; }
+  #email-search .heading {
+    text-align: center; }
+    #email-search .heading h1 {
+      font-size: 48px; }
+  #email-search .sub-heading {
+    text-align: center; }
+    #email-search .sub-heading h5 {
+      font-size: 20px; }
+  #email-search .icon-text .text p {
+    font-size: 16px; }
   #list-section .heading h2 {
     font-size: 48px; }
   #list-section .para p {
     font-size: 20px;
     line-height: 28px; }
   #list-section .list ol li {
-    width: auto; } }
+    width: auto; }
+  #result-section .sub-heading h5 {
+    font-size: 21px; }
+  #result-section .result-row {
+    padding: 0; }
+    #result-section .result-row .result-box {
+      padding: 2rem 0rem; }
+      #result-section .result-row .result-box .result-content {
+        padding: 0; }
+        #result-section .result-row .result-box .result-content .result {
+          margin: 0 1rem; } }
+
+@media only screen and (max-width: 604px) {
+  #result-section .sub-heading {
+    margin: 0 auto; }
+  #result-section .result-row .result-box {
+    height: 480px; }
+    #result-section .result-row .result-box .result-content .result {
+      margin: 0 1rem; }
+  footer .link {
+    text-align: center; } }
 
 @media only screen and (max-width: 480px) {
-  #email-search {
-    height: 503px; }
-    #email-search .heading {
-      text-align: center; }
-      #email-search .heading h1 {
-        font-size: 38px; }
-    #email-search .sub-heading {
-      text-align: center; }
-      #email-search .sub-heading h5 {
-        font-size: 18px; }
-    #email-search .form input[type=email] {
-      width: 100%;
-      margin-bottom: 4px; }
-    #email-search .form .btn-submit {
-      width: 100%; }
+  #email-search .heading {
+    text-align: center; }
+    #email-search .heading h1 {
+      font-size: 38px; }
+  #email-search .sub-heading {
+    text-align: center; }
+    #email-search .sub-heading h5 {
+      font-size: 18px; }
+  #email-search .form input[type=email] {
+    width: 100%;
+    margin-bottom: 4px; }
+  #email-search .form .btn-submit {
+    width: 100%;
+    font-size: 22px;
+    padding: 5px 30px; }
+  #email-search .icon-text .text p {
+    font-size: 14px; }
   #list-section .heading {
     margin: 20px auto; }
     #list-section .heading h2 {
@@ -222,5 +349,21 @@ body {
       line-height: 24px; }
       #list-section .list ol li h6 {
         font-size: 20px; }
+  #result-section .heading h1 {
+    font-size: 38px; }
+  #result-section .sub-heading {
+    margin: 0 auto;
+    text-align: center; }
+    #result-section .sub-heading h5 {
+      font-size: 18px;
+      color: #4A4A4A; }
+  #result-section .result-row .result-box {
+    padding: 2rem 2rem; }
+    #result-section .result-row .result-box .result-content {
+      padding: 0; }
+      #result-section .result-row .result-box .result-content .result {
+        margin: 0 auto; }
+        #result-section .result-row .result-box .result-content .result .img-result {
+          display: none; }
   footer .link {
     text-align: center; } }

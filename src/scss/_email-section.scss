@@ -1,7 +1,7 @@
 #email-search{
     background-color: #004A80;
     color:#fff;
-    height: 420px;
+    padding: 0 0 1rem;
    
     .heading{
         justify-content: center;
@@ -58,18 +58,25 @@
           
           .floating-input:focus , .floating-select:focus {
                outline:none;
-               border-bottom:2px solid #5264AE; 
+               border: 2px solid #F6BC25;
+               box-shadow: inset 0 -1px 4px 0 rgba(0,0,0,0.20);
           }
-          
+          .error{
+              display: none;
+            text-transform: none;
+           
+            color: red;
+            letter-spacing: 0;
+            }
           label {
-            font-size: 16px;
+            font-size: 15px;
             color: #9B9B9B;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             text-transform: uppercase;
             position:absolute;
             pointer-events:none;
             line-height: 18px;
-            left:16px;
+            left:18px;
             top: 13px;
             transition:0.2s ease all; 
             -moz-transition:0.2s ease all; 
@@ -77,39 +84,33 @@
           }
           
           .floating-input:focus ~ label, .floating-input:not(:placeholder-shown) ~ label {
-            top: 2px;
-            font-size:14px;
-            
+            top: 6px;
+            font-size: 12px;         
           }
           
           .floating-select:focus ~ label , .floating-select:not([value=""]):valid ~ label {
             top:2px;
             font-size:14px;
-          
           }
           
        }
             input[type=email]{
-                display: inline-block;
-                // width: 780px;
                 font-size: 16px;
-                color: #9B9B9B;
+                color: #000000;
                 letter-spacing: 2px;
                 padding: 12px 13px;
                 line-height: 18px;
-                text-transform: uppercase;
-
             }
           
             .btn-submit{
-                background-color: #F6BC25 ;
+                background-image: linear-gradient(225deg, #F2DA56 0%, #F6BC25 100%);
+    box-shadow: 0 0px 0 0 #A6953B, inset 0 0px 0 0 #FFFFFF;
                 font-size: 16px;
                 font-weight: bold;
                 color: #004A80;
                 letter-spacing: 1px;
-                padding: 10px 30px;
+                padding: 0.6rem 3rem;
                 border-radius: 6px;
-                 width: 9rem;
                 cursor: pointer;
                 &:hover{
                     background-color: #F2DA56;
